@@ -1,127 +1,193 @@
-@extends('layouts.app', ['activePage' => 'notifications', 'titlePage' => __('Notifications')])
+<x-layout bodyClass="g-sidenav-show  bg-gray-200">
 
-@section('content')
-<div class="content">
-  <div class="container-fluid">
-    <div class="card">
-      <div class="card-header card-header-primary">
-        <h3 class="card-title">Notifications</h3>
-        <p class="card-category">Handcrafted by our friend
-          <a target="_blank" href="https://github.com/mouse0270">Robert McIntosh</a>. Please checkout the
-          <a href="http://bootstrap-notify.remabledesigns.com/" target="_blank">full documentation.</a>
-        </p>
-      </div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-6">
-            <h4 class="card-title">Notifications Style</h4>
-            <div class="alert alert-info">
-              <span>This is a plain notification</span>
+    <x-navbars.sidebar activePage="notifications"></x-navbars.sidebar>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <!-- Navbar -->
+        <x-navbars.navs.auth titlePage="Notifications"></x-navbars.navs.auth>
+        <!-- End Navbar -->
+        <div class="container-fluid py-4">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="card mt-4">
+                        <div class="card-header p-3">
+                            <h5 class="mb-0">Alerts</h5>
+                        </div>
+                        <div class="card-body p-3 pb-0">
+                            <div class="alert alert-primary alert-dismissible text-white" role="alert">
+                                <span class="text-sm">A simple primary alert with <a href="javascript:;"
+                                        class="alert-link text-white">an example link</a>. Give it a click if you
+                                    like.</span>
+                                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="alert alert-secondary alert-dismissible text-white" role="alert">
+                                <span class="text-sm">A simple secondary alert with <a href="javascript:;"
+                                        class="alert-link text-white">an example link</a>. Give it a click if you
+                                    like.</span>
+                                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="alert alert-success alert-dismissible text-white" role="alert">
+                                <span class="text-sm">A simple success alert with <a href="javascript:;"
+                                        class="alert-link text-white">an example link</a>. Give it a click if you
+                                    like.</span>
+                                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="alert alert-danger alert-dismissible text-white" role="alert">
+                                <span class="text-sm">A simple danger alert with <a href="javascript:;"
+                                        class="alert-link text-white">an example link</a>. Give it a click if you
+                                    like.</span>
+                                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="alert alert-warning alert-dismissible text-white" role="alert">
+                                <span class="text-sm">A simple warning alert with <a href="javascript:;"
+                                        class="alert-link text-white">an example link</a>. Give it a click if you
+                                    like.</span>
+                                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="alert alert-info alert-dismissible text-white" role="alert">
+                                <span class="text-sm">A simple info alert with <a href="javascript:;"
+                                        class="alert-link text-white">an example link</a>. Give it a click if you
+                                    like.</span>
+                                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="alert alert-light alert-dismissible text-white" role="alert">
+                                <span class="text-sm">A simple light alert with <a href="javascript:;"
+                                        class="alert-link text-white">an example link</a>. Give it a click if you
+                                    like.</span>
+                                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dark alert-dismissible text-white" role="alert">
+                                <span class="text-sm">A simple dark alert with <a href="javascript:;"
+                                        class="alert-link text-white">an example link</a>. Give it a click if you
+                                    like.</span>
+                                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mt-4">
+                        <div class="card-header p-3">
+                            <h5 class="mb-0">Notifications</h5>
+                            <p class="text-sm mb-0">
+                                Notifications on this page use Toasts from Bootstrap. Read more details <a
+                                    href="https://getbootstrap.com/docs/5.0/components/toasts/" target="
+          ">here</a>.
+                            </p>
+                        </div>
+                        <div class="card-body p-3">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-6 col-12">
+                                    <button class="btn bg-gradient-success w-100 mb-0 toast-btn" type="button"
+                                        data-target="successToast">Success</button>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 mt-sm-0 mt-2">
+                                    <button class="btn bg-gradient-info w-100 mb-0 toast-btn" type="button"
+                                        data-target="infoToast">Info</button>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 mt-lg-0 mt-2">
+                                    <button class="btn bg-gradient-warning w-100 mb-0 toast-btn" type="button"
+                                        data-target="warningToast">Warning</button>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 mt-lg-0 mt-2">
+                                    <button class="btn bg-gradient-danger w-100 mb-0 toast-btn" type="button"
+                                        data-target="dangerToast">Danger</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="alert alert-info">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <i class="material-icons">close</i>
-              </button>
-              <span>This is a notification with close button.</span>
+            <div class="position-fixed bottom-1 end-1 z-index-2">
+                <div class="toast fade hide p-2 bg-white" role="alert" aria-live="assertive" id="successToast"
+                    aria-atomic="true">
+                    <div class="toast-header border-0">
+                        <i class="material-icons text-success me-2">
+                            check
+                        </i>
+                        <span class="me-auto font-weight-bold">Material Dashboard </span>
+                        <small class="text-body">11 mins ago</small>
+                        <i class="fas fa-times text-md ms-3 cursor-pointer" data-bs-dismiss="toast"
+                            aria-label="Close"></i>
+                    </div>
+                    <hr class="horizontal dark m-0">
+                    <div class="toast-body">
+                        Hello, world! This is a notification message.
+                    </div>
+                </div>
+                <div class="toast fade hide p-2 mt-2 bg-gradient-info" role="alert" aria-live="assertive" id="infoToast"
+                    aria-atomic="true">
+                    <div class="toast-header bg-transparent border-0">
+                        <i class="material-icons text-white me-2">
+                            notifications
+                        </i>
+                        <span class="me-auto text-white font-weight-bold">Material Dashboard </span>
+                        <small class="text-white">11 mins ago</small>
+                        <i class="fas fa-times text-md text-white ms-3 cursor-pointer" data-bs-dismiss="toast"
+                            aria-label="Close"></i>
+                    </div>
+                    <hr class="horizontal light m-0">
+                    <div class="toast-body text-white">
+                        Hello, world! This is a notification message.
+                    </div>
+                </div>
+                <div class="toast fade hide p-2 mt-2 bg-white" role="alert" aria-live="assertive" id="warningToast"
+                    aria-atomic="true">
+                    <div class="toast-header border-0">
+                        <i class="material-icons text-warning me-2">
+                            travel_explore
+                        </i>
+                        <span class="me-auto font-weight-bold">Material Dashboard </span>
+                        <small class="text-body">11 mins ago</small>
+                        <i class="fas fa-times text-md ms-3 cursor-pointer" data-bs-dismiss="toast"
+                            aria-label="Close"></i>
+                    </div>
+                    <hr class="horizontal dark m-0">
+                    <div class="toast-body">
+                        Hello, world! This is a notification message.
+                    </div>
+                </div>
+                <div class="toast fade hide p-2 mt-2 bg-white" role="alert" aria-live="assertive" id="dangerToast"
+                    aria-atomic="true">
+                    <div class="toast-header border-0">
+                        <i class="material-icons text-danger me-2">
+                            campaign
+                        </i>
+                        <span class="me-auto text-gradient text-danger font-weight-bold">Material Dashboard </span>
+                        <small class="text-body">11 mins ago</small>
+                        <i class="fas fa-times text-md ms-3 cursor-pointer" data-bs-dismiss="toast"
+                            aria-label="Close"></i>
+                    </div>
+                    <hr class="horizontal dark m-0">
+                    <div class="toast-body">
+                        Hello, world! This is a notification message.
+                    </div>
+                </div>
             </div>
-            <div class="alert alert-info alert-with-icon" data-notify="container">
-              <i class="material-icons" data-notify="icon">add_alert</i>
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <i class="material-icons">close</i>
-              </button>
-              <span data-notify="message">This is a notification with close button and icon.</span>
-            </div>
-            <div class="alert alert-info alert-with-icon" data-notify="container">
-              <i class="material-icons" data-notify="icon">add_alert</i>
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <i class="material-icons">close</i>
-              </button>
-              <span data-notify="message">This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</span>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <h4 class="card-title">Notification states</h4>
-            <div class="alert alert-info">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <i class="material-icons">close</i>
-              </button>
-              <span>
-                <b> Info - </b> This is a regular notification made with ".alert-info"</span>
-            </div>
-            <div class="alert alert-success">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <i class="material-icons">close</i>
-              </button>
-              <span>
-                <b> Success - </b> This is a regular notification made with ".alert-success"</span>
-            </div>
-            <div class="alert alert-warning">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <i class="material-icons">close</i>
-              </button>
-              <span>
-                <b> Warning - </b> This is a regular notification made with ".alert-warning"</span>
-            </div>
-            <div class="alert alert-danger">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <i class="material-icons">close</i>
-              </button>
-              <span>
-                <b> Danger - </b> This is a regular notification made with ".alert-danger"</span>
-            </div>
-            <div class="alert alert-primary">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <i class="material-icons">close</i>
-              </button>
-              <span>
-                <b> Primary - </b> This is a regular notification made with ".alert-primary"</span>
-            </div>
-          </div>
+            <x-footers.auth></x-footers.auth>
         </div>
-      </div>
-      <div class="col-md-12">
-        <div class="places-buttons">
-          <div class="row">
-            <div class="col-md-6 ml-auto mr-auto text-center">
-              <h4 class="card-title">
-                Notifications Places
-                <p class="category">Click to view notifications</p>
-              </h4>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-8 col-md-10 ml-auto mr-auto">
-              <div class="row">
-                <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" onclick="md.showNotification('top','left')">Top Left</button>
-                </div>
-                <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" onclick="md.showNotification('top','center')">Top Center</button>
-                </div>
-                <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" onclick="md.showNotification('top','right')">Top Right</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-8 col-md-10 ml-auto mr-auto">
-              <div class="row">
-                <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" onclick="md.showNotification('bottom','left')">Bottom Left</button>
-                </div>
-                <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" onclick="md.showNotification('bottom','center')">Bottom Center</button>
-                </div>
-                <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" onclick="md.showNotification('bottom','right')">Bottom Right</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-@endsection
+    </main>
+    <x-plugins></x-plugins>
+
+</x-layout>
